@@ -3,10 +3,17 @@ let plantArray = []
 
 // In the module, define and export a function named addPlant.
 // The addPlant function must accept a seed object as input. The function will add the seed to the field 
-export let addPlant = (seedObject) => {
-    plantArray.push(seedObject)
-    return plantArray
+export const addPlant = (seed) => {
+    if (Array.isArray(seed)) {
+        for (const cornSeed of seed) {
+            plantArray.push(cornSeed)
+        }
+    } else {
+        plantArray.push(seed)
+    }
 }
 
 // Define and export a function named usePlants that returns a copy of the array of plants.
-let usePlants = plantArray
+export const usePlants = () => {
+    return plantArray
+}

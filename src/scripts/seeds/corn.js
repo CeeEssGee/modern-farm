@@ -1,4 +1,6 @@
-export let createCorn = () => {
+const cornArray = []
+
+export const createCorn = () => {
     let cornArray = [
         {
             type: "Corn",
