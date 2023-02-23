@@ -7,8 +7,8 @@ let plantArray = []
 // Be aware that when planting corn, an array of objects will be provided instead of a single object like all the other type of seeds. Investigate the Array.isArray method to check if corn got passed in, or one of the others. 
 export const addPlant = (seed) => {
     if (Array.isArray(seed)) { // true or false - the object is the parameter, if it is an array, true, if not, false
-        for (const cornSeed of seed) {
-            plantArray.push(cornSeed)
+        for (const seedArray of seed) {
+            plantArray.push(seedArray)
         }
     } else {
         plantArray.push(seed)
